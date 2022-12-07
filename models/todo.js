@@ -14,9 +14,30 @@ module.exports = (sequelize, DataTypes) => {
       return this.create({ title: title, dueDate: dueDate, completed: false });
     }
 
+<<<<<<< HEAD
     markAsCompleted() {
       return this.update({ completed: true });
     }
+=======
+    static getTodos() {
+      return this.findAll();
+    }
+
+    markAsCompleted() {
+      return this.update({ completed: true });
+    }
+
+    static async overdue() {
+      return this.findAll({
+        where: {
+          dueDate: {
+            [Op.lt]: new Date(),
+          },
+          completed: false,
+        },
+      });
+    }
+>>>>>>> da4b4bd (wd level 7)
   }
   Todo.init(
     {

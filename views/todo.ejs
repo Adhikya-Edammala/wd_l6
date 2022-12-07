@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <table border="1">
     <tr>
       <th>ID</th>
@@ -14,3 +15,21 @@
       </tr>
     <% } %>
   </table>
+=======
+<table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Due Date</th>
+      <th>Is Completed?</th>
+    </tr>
+    <% for(let i=0;i<allTodos.length; i++) { %>
+      <tr>
+        <td><%= allTodos[i].id %></td>
+        <td><%= allTodos[i].title %></td>
+        <td><%= allTodos[i].dueDate %></td>
+        <td><%= allTodos[i].completed %></td>
+      </tr>
+    <% } %>
+  </table>
+>>>>>>> da4b4bd (wd level 7)
